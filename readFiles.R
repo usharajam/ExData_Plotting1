@@ -1,15 +1,15 @@
+
+## Download the dataset from the given URL and stores in the current working directory
 downloadDataSet<-function(
   dataSetURL="https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip"
 ){
-  
     if(!file.exists("./household_power_consumption.txt")) 
     { 
      
       download.file(dataSetURL,"./hpc.zip")
       unzip("./hpc.zip")
       
-    }
-  
+    }  
 }
   ## Assumption: for OSs other than windows using grep with pipe works perfect for filtering data
   ## For Windows Platform we need findstr in the place of grep 
